@@ -1,25 +1,26 @@
-package com.nader.aria.infintyProject.model.phonebook;
+package com.nader.aria.infintyProject.model.medicine;
 
 import java.util.List;
 
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 import com.nader.aria.infintyProject.model.account.Login;
 
-public class LoginPhoneBook extends BaseEntity {
+public class DrugInfoManager extends BaseEntity {
 
-	
+
 	private static final long serialVersionUID = 1L;
 	
 	private Login login;
 	
-	private List<PhoneBook> phoneBooks;
+	private List<DrugInfo> drugInfos;
+	
 	
 	public Login getLogin() { return login; }
 	public void setLogin(Login login) { this.login = login; }
 	
-	public List<PhoneBook> getPhoneBooks(){ return phoneBooks; }
-	public void setPhoneBook(List<PhoneBook> phoneBooks) { this.phoneBooks = phoneBooks; }
+	public List<DrugInfo> getDrugInfos(){ return drugInfos; }
+	public void setDrugInfo(List<DrugInfo> drugInfos) { this.drugInfos =drugInfos; }
 	
-
+	
 
 }

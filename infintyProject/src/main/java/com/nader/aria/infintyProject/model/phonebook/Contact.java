@@ -1,7 +1,7 @@
 package com.nader.aria.infintyProject.model.phonebook;
 
-import com.nader.aria.infintyProject.model.Address;
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
+import com.nader.aria.infintyProject.model.account.Address;
 
 public class Contact extends BaseEntity {
 

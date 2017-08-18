@@ -4,7 +4,7 @@ package com.nader.aria.infintyProject.model.phonebook;
 
 import java.util.List;
 
-import com.nader.aria.infintyProject.model.User;
+import com.nader.aria.infintyProject.model.account.User;
 
 public class UserContact extends User {
 

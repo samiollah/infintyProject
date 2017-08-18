@@ -1,4 +1,4 @@
-package com.nader.aria.infintyProject.model;
+package com.nader.aria.infintyProject.model.account;
 
 import com.nader.aria.infintyProject.model.enums.Language;
 import com.nader.aria.infintyProject.model.enums.Theme;

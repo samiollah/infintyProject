@@ -2,8 +2,8 @@ package com.nader.aria.infintyProject.model.financial;
 
 import java.util.List;
 
-import com.nader.aria.infintyProject.model.Login;
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
+import com.nader.aria.infintyProject.model.account.Login;
 
 public class FundManager extends BaseEntity {
 

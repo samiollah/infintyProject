@@ -1,4 +1,4 @@
-package com.nader.aria.infintyProject.model;
+package com.nader.aria.infintyProject.model.account;
 
 import java.util.Calendar;
 
