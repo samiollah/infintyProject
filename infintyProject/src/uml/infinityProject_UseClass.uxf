@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>30</y>
+      <w>85</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>/BaseEntity/
+--
+-id:long
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>565</x>
+      <y>30</y>
+      <w>90</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>All Class 
+extends BaseEntity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>755</y>
+      <w>75</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-firstName:String
+-lastName:String
+-gender:Gender
+-birthDay:Calander
+-address:Address
+-callInfo:CallInfo
+-image:byte[]
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>700</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Setting
+--
+-theme:Theme
+-language:Language
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>145</x>
+      <y>845</y>
+      <w>85</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>CallInfo
+--
+-site:String
+-email:String
+-phone:String
+-cell:String
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>145</x>
+      <y>755</y>
+      <w>85</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+-country:String
+-city:String
+-line:String
+-alley:String
+-fullAddress:String
+-no :int
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>145</x>
+      <y>705</y>
+      <w>50</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+MAN,
+WOMAN,
+OTHER</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>645</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Login
+--
+-user:User
+-userNamePassword:UserNamePassword
+-setting:Setting
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>295</x>
+      <y>700</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>UserNamePassword
+--
+-userName:String
+-password:String
+--
++Getter And Setter
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>285</y>
+      <w>110</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>/Fund/
+--
+-fundManager:FundManager
+-minStock:long
+-maxStock:long
+-currentStock:long
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>265</x>
+      <y>250</y>
+      <w>50</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>CurrentFund
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>340</y>
+      <w>75</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>FactorDetails
+--
+-cost:Cost
+-title:String
+-amountOf:Long
+-pricePerUnit:long
+-sum:long
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>235</y>
+      <w>100</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>FundManager
+--
+-login:Login
+-funds:Set&lt;Fund&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>205</x>
+      <y>250</y>
+      <w>50</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>ReversFund
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>725</y>
+      <w>105</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Drug
+--
+-drugManager:DrugManager
+-title:String
+-startDate:Calendar
+-endDate:Calendar
+-useTime:Calendar
+-description:String
+-complications:String
+-consumed:boolean
+-actice:boolean
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>670</y>
+      <w>75</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>DrugManager
+--
+-login:Login
+-drugs:Set&lt;Drug&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>675</y>
+      <w>165</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>MedicineTest
+--
+-medicineTestManager:MedicineTestManager
+-value:String
+-date:Calendar
+normalValue :String
+-relatedDiseases:boolean
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>765</y>
+      <w>110</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>MedicineInfo
+--
+-medicineVisit:MedicineVisit
+-title:String
+-description:String
+-address:Address
+-fee:Long
+--date:Calendar
+-medicineType:MedicineType
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>625</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>MedicineTestManager
+--
+-login:Login
+-medicineTestType:Set&lt;MedicineTestType&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>770</y>
+      <w>125</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>MedicineVisit
+--
+-login:Login
+-medicineinfo:Set&lt;MedicineInfo&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>110</y>
+      <w>105</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ReminderManager
+--
+-login:Login
+-reminders:Set&lt;Reminder&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1095</x>
+      <y>325</y>
+      <w>105</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Aim
+--
+-title:String
+-code:String
+-description:String
+-aimType:AimType
+-aimTimeType:AimTimeType
+-stateType:StateType
+-sprint:Set&lt;Sprint&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1090</x>
+      <y>275</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>AimManager
+--
+-login:Login
+-aimes:Set&lt;Aim&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>415</y>
+      <w>85</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Sprint
+--
+-aim:Aim
+-title:String
+-code:String
+-startDate:Calendar
+-endDate:Calendar
+-stateType:StateType
+-tasks:Set&lt;ITask&gt;
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>820</y>
+      <w>60</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+MedicineType
+--
+CLINIC(0),
+PARA_CLINIC(1),
+HOSPITAL(2),
+OFFICE(3),
+OTHER(4);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>275</y>
+      <w>50</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+CostType
+--
+DEBT(0),
+FARE(1),
+BUY(2),
+OTHER(3);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>205</x>
+      <y>275</y>
+      <w>50</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+PayType
+--
+CHECK(0),
+PAYMENT(1),
+BILL(2),
+GENERIC(3);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>485</y>
+      <w>65</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+PriorityType
+--
+CRITICAL(0),
+IMMEDIATE(1),
+HIGH(2),
+NORMAL(3),
+LOW(4);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>885</x>
+      <y>155</y>
+      <w>70</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+RepetitionType
+--
+MONTHLY(0),
+WEELLY(1),
+-menute
+EVERYDAY(2),
+SATURDAY(3),
+SUNDAY(4),
+MONDAY(5),
+TUESDAY(6),
+WEDNESDAY(7),
+THURSDAY(8),
+FRIDAY(10);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1110</x>
+      <y>505</y>
+      <w>65</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+StateType
+--
+OPENED(0),
+CLOSED(1),
+REOPENED(2),
+WAITING(3),
+IN_PROGESS(4),
+DONE(5),
+TODO(6),
+UN_PLANING(7),
+PLANED(8);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>555</y>
+      <w>85</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+TaskType
+--
+UN_PLANING(0),
+DAILY_SCHEDULE(1),
+SPRINT(2);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>285</x>
+      <y>355</y>
+      <w>75</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+FinanceType
+--
+PREDICTABLE(0),
+UNPREDICTABLE(1);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>325</y>
+      <w>65</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+AimTimeType
+--
+SHORT_TERM(0),
+MIDTERM(1),
+LONGTIME(2),
+IMMEDIATE(3);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>390</y>
+      <w>65</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+AimType
+--
+ACADEMIC(0),
+EDUCATIONAL(1),
+FINANCIAL(2),
+WORK(3),
+PHYSICAL(4),
+SPIRITUAL(5),
+GENERIC(6),
+OTHER(7);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>145</x>
+      <y>660</y>
+      <w>50</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Language
+--
+ENGLISH(0),
+PERSIAN(1);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>820</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+MedicineTestType
+--
+BLOOD_SUGAR(0),
+BLOOD_PRESSURE(1);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>40</y>
+      <w>80</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>705</x>
+      <y>0</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IMessage
+--
++getTitle():String
++getMessage():String
++getIcon():byte[]
++getDescription():String
++isRepetiton(): boolean
++getRepetitonType():RepetitonType
++getPriority():PriorityType
++getCalander():Calander</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>425</x>
+      <y>120</y>
+      <w>150</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>IFinancial
+--
++getTitile():String
++getValue():long
++getFund():Fund
++isPayed():Boolean
++getFinancetype():FinanceType
++getPayType():PayType
++getCostType():CostType
++getSeller():String//orUser//orgest
++getFactorDetails():List&lt;FactorDetails&gt;
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1160</x>
+      <y>155</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ITask
+--
++getSprint():Sprint
++getCode():String
++getPriorityType():PriorityType()
++getTaskType():TaskType
++getStateType():StateType
++getSteament():Calandar
++getLogWork():Calandar
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>260</y>
+      <w>80</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>ErrorMessage
+--
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>0</x>
+      <y>160</y>
+      <w>140</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>IDependency
+--
++getTaskDependency():List&lt;ITask&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>260</y>
+      <w>105</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>WarningMessage
+--
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>95</y>
+      <w>90</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;300.0;10.0;300.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>95</y>
+      <w>65</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0;110.0;300.0;110.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>975</x>
+      <y>170</y>
+      <w>80</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ReminderState
+--
+ERROR,
+WARNING,
+BOTH</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>705</x>
+      <y>295</y>
+      <w>145</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Reminder
+--
+-reminderManager:ReminderManager
+-warningMessage:WaringMessage
+-errorMessage:ErrorMessage
+-reminderState:ReminderState
+-calendar:Calendar
+-active:boolean
+--
++Getter And Setter</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
