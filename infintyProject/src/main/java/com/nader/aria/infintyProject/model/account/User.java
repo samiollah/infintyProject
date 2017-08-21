@@ -2,9 +2,14 @@ package com.nader.aria.infintyProject.model.account;
 
 import java.util.Calendar;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 import com.nader.aria.infintyProject.model.enums.Gender;
 
+@Entity
+@Table(name="USERS")
 public class User extends BaseEntity {
 
 	
