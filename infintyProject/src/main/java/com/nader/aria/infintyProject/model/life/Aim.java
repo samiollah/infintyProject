@@ -1,5 +1,16 @@
 package com.nader.aria.infintyProject.model.life;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+
 import java.util.List;
 
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
@@ -7,26 +18,39 @@ import com.nader.aria.infintyProject.model.enums.AimTimeType;
 import com.nader.aria.infintyProject.model.enums.AimType;
 import com.nader.aria.infintyProject.model.enums.StateType;
 
+@Entity
+@Table(name="AIMS")
 public class Aim extends BaseEntity {
 
 	
 	private static final long serialVersionUID = 1L;
 	
-	
+	@ManyToOne(cascade=CascadeType.REFRESH ,fetch = FetchType.EAGER)
+	@Column(name="LIFE_ID")
 	private Life life;
 	
+	@Column(name="TITLE")
 	private String title;
 	
+	@Column(name="CODE")
 	private String code;
 	
+	@Column(name="DESCRIPTION")
 	private String description;
 	
+	@Enumerated(EnumType.STRING)
+	@Column(name="AIM_TYPE")
 	private AimType aimType;
 	
+	@Enumerated(EnumType.STRING)
+	@Column(name="AIM_TIME_TYPE")
 	private AimTimeType aimTimeType;
 	
+	@Enumerated(EnumType.STRING)
+	@Column(name="STATE_TYPE")
 	private StateType stateType;
 	
+	@OneToMany(cascade = CascadeType.ALL ,fetch = FetchType.LAZY )
 	private List<Sprint> sprints;
 	
 	

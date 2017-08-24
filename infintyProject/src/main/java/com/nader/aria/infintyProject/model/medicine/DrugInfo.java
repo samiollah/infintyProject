@@ -2,32 +2,57 @@ package com.nader.aria.infintyProject.model.medicine;
 
 import java.util.Calendar;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.OneToOne;
+
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 
+@Entity
+@Table(name="DRUG_INFOS")
 public class DrugInfo extends BaseEntity {
 
 
 	private static final long serialVersionUID = 1L;
 	
-	
+	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@Column(name="DRUG_INFO_MANAGER_ID")
 	private DrugInfoManager drugInfoManager;
 	
+	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@Column(name="MEDICINE_INFO_ID")
 	private MedicineInfo medicineInfo;
 	
+	@Column(name="TITLE")
 	private String title;
 	
+	@Temporal(TemporalType.DATE)
+	@Column(name="START_DATE")
 	private Calendar startDate;
 	
+	@Temporal(TemporalType.DATE)
+	@Column(name="END_DATE")
 	private Calendar endDate;
 	
+	@Temporal(TemporalType.DATE)
+	@Column(name="USE_TIME")
 	private Calendar useTime;
 	
+	@Column(name="DESCTIPTION")
 	private String description;
 	
+	@Column(name="COMPLICATIONS")
 	private String complications;
 	
+	@Column(name="CONSUMED")
 	private boolean consumed;
 	
+	@Column(name="ACTIVE")
 	private boolean active;
 
 	public DrugInfoManager getDrugInfoManager() { return drugInfoManager; }

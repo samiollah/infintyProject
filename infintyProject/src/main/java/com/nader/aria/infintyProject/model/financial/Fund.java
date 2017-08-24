@@ -2,16 +2,31 @@ package com.nader.aria.infintyProject.model.financial;
 
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+
+
+@Entity
+@Table(name="FUNDS")
 public class Fund extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 	
+	@ManyToOne(cascade = CascadeType.ALL , fetch = FetchType.EAGER )
+	@Column(name="FUND_MANAGER_ID")
 	private FundManager fundManager;
 	
+	@Column(name="MIN_STOCK")
 	private long minStock;
 	
+	@Column(name="MAX_STOCK")
 	private long maxStock;
 	
+	@Column(name="CURRENT_STOCK")
 	private long currentStock;
 	
 

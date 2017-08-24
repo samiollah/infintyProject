@@ -5,13 +5,26 @@ import java.util.List;
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 import com.nader.aria.infintyProject.model.account.Login;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+@Table(name="LOGIN_PHONE_BOOKS")
 public class LoginPhoneBook extends BaseEntity {
 
 	
 	private static final long serialVersionUID = 1L;
 	
+	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@Column(name="LOGIN_ID")
 	private Login login;
 	
+	@OneToMany( cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY )
 	private List<PhoneBook> phoneBooks;
 	
 	public Login getLogin() { return login; }

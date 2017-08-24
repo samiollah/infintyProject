@@ -1,21 +1,38 @@
 package com.nader.aria.infintyProject.model.phonebook;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.OneToOne;
+
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 import com.nader.aria.infintyProject.model.account.Address;
 
+@Entity
+@Table(name="CONTACTS")
 public class Contact extends BaseEntity {
 
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Column(name="TYPE")
 	private String type;
 	
+	@Column(name="PHONE")
 	private String phone;
 	
+	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@Column(name="ADDRESS_ID")
 	private Address address;
 	
+	@Column(name="DESCRIPTION")
 	private String description;
 	
+	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@Column(name="USER_CONTACT_ID")
 	private UserContact userContact;
 
 	public String getType() { return type; }
