@@ -8,7 +8,7 @@ import javax.persistence.Column;
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 
 @Entity
-@Table(name="GROUPS")
+@Table(name="GROUPS" )
 public class Group extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;

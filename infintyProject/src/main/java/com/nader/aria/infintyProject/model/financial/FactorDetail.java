@@ -14,7 +14,7 @@ public class FactorDetail extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 	
-	@ManyToOne(cascade=CascadeType.REFRESH ,fetch = FetchType.EAGER)
+	@ManyToOne(cascade={CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER)
 	@Column(name="FACTOR_ID")
 	private Factor factor;
 	

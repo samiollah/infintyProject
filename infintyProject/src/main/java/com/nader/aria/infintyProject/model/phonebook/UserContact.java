@@ -22,7 +22,7 @@ public class UserContact extends User {
 	@Column(name="DESCRIPTION")
 	private String description;
 	
-	@OneToMany( cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY )
+	@OneToMany( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY )
 	private List<Contact> contacts;
 	
 	

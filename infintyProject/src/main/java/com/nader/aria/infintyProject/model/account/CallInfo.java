@@ -3,11 +3,16 @@ package com.nader.aria.infintyProject.model.account;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 
 @Entity
-@Table(name="CALL_INFOS")
+@Table(name="CALL_INFOS", uniqueConstraints= {
+								@UniqueConstraint( columnNames = {"site"} ),
+								@UniqueConstraint( columnNames = {"email"} ),
+								@UniqueConstraint( columnNames = {"cell"} )
+							})
 public class CallInfo extends BaseEntity {
 
 	

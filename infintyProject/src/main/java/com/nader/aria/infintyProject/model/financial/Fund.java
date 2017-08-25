@@ -16,7 +16,7 @@ public class Fund extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 	
-	@ManyToOne(cascade = CascadeType.ALL , fetch = FetchType.EAGER )
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} , fetch = FetchType.EAGER )
 	@Column(name="FUND_MANAGER_ID")
 	private FundManager fundManager;
 	

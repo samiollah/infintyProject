@@ -20,11 +20,11 @@ public class Life extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name ="LoGIN_ID" )
 	private Login login;
 	
-	@OneToMany( cascade = CascadeType.ALL ,fetch = FetchType.LAZY )
+	@OneToMany( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY )
 	private List<Aim> aims;
 	
 	public Login getLogin() { return login; }

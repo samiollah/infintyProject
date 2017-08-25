@@ -4,11 +4,12 @@ package com.nader.aria.infintyProject.model.account;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 
 @Entity
-@Table(name="USER_NAME_PASSWORDS")
+@Table(name="USER_NAME_PASSWORDS" ,uniqueConstraints = @UniqueConstraint(columnNames= {"userName"}))
 public class UserNamePassword extends BaseEntity {
 
 

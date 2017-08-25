@@ -19,11 +19,11 @@ public class FundManager extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	@OneToOne(cascade = CascadeType.REFRESH , fetch = FetchType.EAGER )
+	@OneToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} , fetch = FetchType.EAGER )
 	@Column(name="Login_ID")
 	private Login login;
 	
-	@ManyToOne(cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY)
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH},fetch = FetchType.LAZY)
 	private List<Fund> funds;
 	
 	

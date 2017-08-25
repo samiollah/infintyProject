@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -18,22 +19,22 @@ import com.nader.aria.infintyProject.model.account.CallInfo;
 import com.nader.aria.infintyProject.model.enums.MedicineType;
 
 @Entity
-@Table(name="MEDICINE_INFOS")
+@Table(name="MEDICINE_INFOS" , uniqueConstraints = @UniqueConstraint( columnNames= {"title","address","medicineType"}) )
 public class MedicineInfo extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="TITLE")
 	private String title;
-	@Column(name="DESCRIPTION")
 	
+	@Column(name="DESCRIPTION")
 	private String description;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH},fetch = FetchType.EAGER )
 	@Column(name="ADDRESS_ID")
 	private Address address;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name="CALL_INFo_ID")
 	private CallInfo callInfo;
 	
@@ -41,7 +42,7 @@ public class MedicineInfo extends BaseEntity {
 	@Column(name="MEDICINE_TYPE")
 	private MedicineType medicineType;
 	
-	@OneToMany( cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY )
+	@OneToMany( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY )
 	private List<DrugInfo> drugInfoes;
 	
 	public String getTitle() { return title;}

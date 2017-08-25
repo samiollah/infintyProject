@@ -33,7 +33,7 @@ public class Financial extends BaseEntity {
 	@Column(name="VALUE")
 	private long value;
 	
-	@OneToOne(cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER)
+	@OneToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER)
 	@Column(name="FUND")
 	private Fund fund;
 	

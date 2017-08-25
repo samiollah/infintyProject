@@ -8,6 +8,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -21,12 +22,12 @@ import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 import com.nader.aria.infintyProject.model.enums.StateType;
 
 @Entity
-@Table(name="SPRINTS")
+@Table(name="SPRINTS",uniqueConstraints = @UniqueConstraint( columnNames= {"aim","title","code"}))
 public class Sprint extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER)
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER)
 	@Column(name="AIM_ID")
 	private Aim aim;
 	
@@ -48,7 +49,7 @@ public class Sprint extends BaseEntity {
 	@Column(name="STATE_TYPE")
 	private StateType stateType;
 	
-	@OneToMany( cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
+	@OneToMany( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY)
 	private List<Task> tasks;
 	
 	

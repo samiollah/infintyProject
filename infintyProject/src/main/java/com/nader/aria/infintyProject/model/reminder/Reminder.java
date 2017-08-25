@@ -27,11 +27,11 @@ public class Reminder extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name = "REMINDER_MANAGER_ID" )
 	private ReminderManager reminderManager;
 	
-	@OneToMany( cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY )
+	@OneToMany( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY )
 	private List<Message> messages;
 	
 	@Enumerated(EnumType.STRING)

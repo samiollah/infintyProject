@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
@@ -28,7 +29,7 @@ import com.nader.aria.infintyProject.model.financial.Financial;
 import com.nader.aria.infintyProject.model.reminder.Reminder;
 
 @Entity
-@Table(name="TASKS")
+@Table(name="TASKS" , uniqueConstraints = @UniqueConstraint( columnNames= {"sprint","title","code"}))
 @Inheritance(strategy = InheritanceType.JOINED )
 @DiscriminatorColumn(name = "TASK_CHILD_TYPE" , discriminatorType = DiscriminatorType.STRING )
 public class Task extends BaseEntity {
@@ -70,18 +71,18 @@ public class Task extends BaseEntity {
 	@Column(name="LOG_WORK")
 	private Calendar logWork;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name="FINANCIAL_ID")
 	private Financial financial;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name="REMINDER_ID")
 	private Reminder reminder;
 	
-	@OneToMany( cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY )
+	@OneToMany( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY )
 	private List<Task> dependencies;
 	
-	@ManyToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.LAZY )
+	@ManyToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.LAZY )
 	@Column(name="DEPENDENCIE_ID")
 	private Task dependencie;
 	

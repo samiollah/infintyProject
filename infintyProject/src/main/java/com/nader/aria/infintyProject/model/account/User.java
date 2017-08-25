@@ -44,11 +44,11 @@ public class User extends BaseEntity {
 	@Column(name="BIRTH_DAY")
 	private Calendar birthDay;
 	
-	@OneToOne(cascade = CascadeType.ALL ,fetch = FetchType.EAGER)
+	@OneToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER)
 	@Column(name="ADDRESS_ID")
 	private Address address;
 	
-	@OneToOne(cascade = CascadeType.ALL ,fetch = FetchType.EAGER)
+	@OneToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER)
 	@Column(name="CALL_INFO_ID")
 	private CallInfo callInfo;
 	

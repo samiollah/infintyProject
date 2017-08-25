@@ -16,7 +16,7 @@ public class MedicineVisit extends Task {
 
 	private static final long serialVersionUID = 1L;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name = "MEDICINE_INTO_ID" )
 	private MedicineInfo medicineInfo;
 	

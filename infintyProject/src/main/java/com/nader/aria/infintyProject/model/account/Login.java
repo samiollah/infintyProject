@@ -17,16 +17,16 @@ public class Login extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 	
-	@OneToOne(cascade= CascadeType.ALL ,fetch= FetchType.EAGER)
+	@OneToOne(cascade= {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch= FetchType.EAGER)
 	@Column(name="USER_ID")
 	private User user;
 	
 	
-	@OneToOne(cascade= CascadeType.ALL ,fetch= FetchType.EAGER)
+	@OneToOne(cascade= {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch= FetchType.EAGER)
 	@Column(name="USER_NAME_PASSWORD_ID")
 	private UserNamePassword userNamePassword;
 	
-	@OneToOne(cascade= CascadeType.ALL ,fetch= FetchType.EAGER)
+	@OneToOne(cascade= {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch= FetchType.EAGER)
 	@Column(name="SETTING_ID")
 	private Setting setting;
 	

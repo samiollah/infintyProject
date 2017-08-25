@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -14,17 +15,17 @@ import javax.persistence.OneToOne;
 import com.nader.aria.infintyProject.model.abstracts.BaseEntity;
 
 @Entity
-@Table(name="DRUG_INFOS")
+@Table(name="DRUG_INFOS" , uniqueConstraints = @UniqueConstraint( columnNames= {"title","startDate","endDate"}) )
 public class DrugInfo extends BaseEntity {
 
 
 	private static final long serialVersionUID = 1L;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name="DRUG_INFO_MANAGER_ID")
 	private DrugInfoManager drugInfoManager;
 	
-	@OneToOne( cascade = CascadeType.REFRESH ,fetch = FetchType.EAGER )
+	@OneToOne( cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} ,fetch = FetchType.EAGER )
 	@Column(name="MEDICINE_INFO_ID")
 	private MedicineInfo medicineInfo;
 	
@@ -47,10 +48,10 @@ public class DrugInfo extends BaseEntity {
 	private String description;
 	
 	@Column(name="COMPLICATIONS")
-	private String complications;
+	private String complications;//عوارض جانبی
 	
 	@Column(name="CONSUMED")
-	private boolean consumed;
+	private boolean consumed;//مصرف شده
 	
 	@Column(name="ACTIVE")
 	private boolean active;
